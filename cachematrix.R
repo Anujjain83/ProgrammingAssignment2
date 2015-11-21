@@ -7,8 +7,9 @@
 ## 3. set_cache the value of the inverse
 ## 4. get_cache the value of the inverse
 
-## To run the program create a matrix, then create another variable of the type makeCacheMatrix using that matrix. 
-## Then execute cacheSolve on the new variable.
+## To run the program create a matrix "x", then create another variable of the type y <-makeCacheMatrix(x)
+## using that matrix x. 
+## Then execute cacheSolve(y) on the new variable.
 
 makeCacheMatrix <- function(x = matrix()) {
     
@@ -52,5 +53,7 @@ cacheSolve <- function(x, ...) {
     data <- x$get()
     hold_matrix <- solve(data)
     x$set_cache(hold_matrix)
+    
+    ## Returning the Inverse Matrix
     hold_matrix
 }
